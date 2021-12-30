@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <!-- Latest compiled and minified CSS Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 conteainer justify-content-center card">
+            <h1 class="text-center"> Create New Student </h1>
+            <div class="card-body">
+                <form th:action="@{/studens}" th:object="${student}" method="POST">
+                    <div class="form-group">
+                        <label> Student First Name </label>
+                        <input
+                            type="text"
+                            name = "firstName"
+                            th:field="*{firstName}"
+                            class = "form-control"
+                            placeholder="Enter Student first name"/>
+                    </div>
+                    <div class="form-group">
+                        <label> Student First Name </label>
+                        <input
+                                type="text"
+                                name = "lastName"
+                                th:field="*{lastName}"
+                                class = "form-control"
+                                placeholder="Enter Student last name"/>
+                    </div>
+                    <div class="form-group">
+                        <label> Student First Name </label>
+                        <input
+                                type="text"
+                                name = "email"
+                                th:field="*{email}"
+                                class = "form-control"
+                                placeholder="Enter Student email"/>
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
