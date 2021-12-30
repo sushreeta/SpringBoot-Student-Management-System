@@ -29,17 +29,17 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 conteainer justify-content-center card">
-            <h1 class="text-center"> Create New Student </h1>
+            <h1 class="text-center"> Update Student </h1>
             <div class="card-body">
-                <form th:action="@{/studens}" th:object="${student}" method="POST">
+                <form th:action="@{/studens/{id} (id=${student.id})" th:object="${student}" method="POST">
                     <div class="form-group">
                         <label> Student First Name </label>
                         <input
-                            type="text"
-                            name = "firstName"
-                            th:field="*{firstName}"
-                            class = "form-control"
-                            placeholder="Enter Student first name"/>
+                                type="text"
+                                name = "firstName"
+                                th:field="*{firstName}"
+                                class = "form-control"
+                                placeholder="Enter Student first name"/>
                     </div>
                     <div class="form-group">
                         <label> Student First Name </label>
